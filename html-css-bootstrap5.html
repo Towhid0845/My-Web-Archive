@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 px-0">
+          <div class="archive d-flex">
+            <div class="sidebar vh-100">
+              <div class="title bg-secondary">
+                <a href="index.html"
+                  class="p-4 d-flex flex-column justify-content-center align-items-center text-center gap-2">
+                  <img src="./images/file.png" alt="">
+                  <span class="text-white">Nogor Archive</span></a>
+              </div>
+
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-bootstrap5.3" role="tabpanel"
+                  aria-labelledby="v-pills-bootstrap5.3-tab" tabindex="0">
+                  <div class="side_list d-flex flex-column align-items-start justify-content-center">
+                    <div class="nav nav-pills w-100 overflow-hidden" id="v-pills-tab" role="tablist"
+                      aria-orientation="vertical">
+                      <button class="nav-link active side_item" id="v-pills-button-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-button" type="button" role="tab" aria-controls="v-pills-button"
+                        aria-selected="false">Button</button>
+
+                      <button class="nav-link side_item" id="v-pills-icon-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-icon" type="button" role="tab" aria-controls="v-pills-icon"
+                        aria-selected="false">Icon</button>
+
+                      <button class="nav-link side_item" id="v-pills-upload-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-upload" type="button" role="tab" aria-controls="v-pills-upload"
+                        aria-selected="false">File Upload</button>
+
+                      <button class="nav-link side_item" id="v-pills-tracking-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-tracking" type="button" role="tab" aria-controls="v-pills-tracking"
+                        aria-selected="false">Tracking</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-body px-3">
+              <div class="d-flex align-items-start justify-content-center border-bottom border-dark py-3 bg-white ">
+                <div class="nav nav-pills">
+                  <a href="#" class="nav-link active">bootstrap 5.3</a>
+                  <a href="#" class="nav-link">bootstrap 6</a>
+                  <a href="#" class="nav-link">bootstrap 7</a>
+                </div>
+              </div>
+
+              <div class="tab-content mt-4" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-button" role="tabpanel"
+                  aria-labelledby="v-pills-button-tab" tabindex="0">
+                  <div class="list d-flex align-items-center gap-4">
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <button class="btn_1" type="submit">Read More</button>
+                      <div class="copy-icon mt-3" onclick="copy('#btn_1')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_1" class="d-none">
+                        <button class="btn_1" type="submit">Read More</button>
+
+                        <!-- css -->
+                        .btn_1 {
+                        font-size: 15px;
+                        font-weight: 500;
+                        background-color: #FFC107;
+                        padding: 10px 25px;
+                        border: none;
+                        color: #ffffff;
+                        position: relative;
+                        z-index: 1;
+                        }
+
+                        .btn_1:hover {
+                        color: #ffffff;
+                        }
+
+                        .btn_1::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 0%;
+                        background-color: #1D272F;
+                        content: "";
+                        z-index: -9;
+                        transition: all linear 0.2s;
+                        }
+
+                        .btn_1:hover::before {
+                        width: 100%;
+                        height: 100%;
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <button class="btn_2" type="submit">HOVER ME, THEN CLICK ME!</button>
+
+                      <div class="copy-icon mt-3" onclick="copy('#btn_2')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_2" class="d-none">
+                        <button class="btn_2" type="submit">HOVER ME, THEN CLICK ME!</button>
+
+                        <!-- css -->
+                        .btn_2 {
+                        border: none;
+                        outline: none;
+                        color: #fff;
+                        background: #111;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 0;
+                        border-radius: 10px;
+                        padding: 12px 30px;
+                        }
+                        .btn_2::before {
+                        content: "";
+                        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff,
+                        #7a00ff, #ff00c8, #ff0000);
+                        position: absolute;
+                        top: -2px;
+                        left: -2px;
+                        background-size: 400%;
+                        z-index: -1;
+                        filter: blur(5px);
+                        width: calc(100% + 4px);
+                        height: calc(100% + 4px);
+                        animation: glowing 20s linear infinite;
+                        opacity: 0;
+                        transition: opacity 0.3s ease-in-out;
+                        border-radius: 10px;
+                        }
+                        .btn_2:after {
+                        z-index: -1;
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: #111;
+                        left: 0;
+                        top: 0;
+                        border-radius: 10px;
+                        }
+                        .btn_2:active {
+                        color: #ffffff;
+                        }
+                        .btn_2:active:after {
+                        background: transparent;
+                        }
+                        .btn_2:hover:before {
+                        opacity: 1;
+                        }
+                        @keyframes glowing {
+                        0% {
+                        background-position: 0 0;
+                        }
+                        50% {
+                        background-position: 400% 0;
+                        }
+                        100% {
+                        background-position: 0 0;
+                        }
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <a href="#" class="btn_3">Hover me</a>
+                      <div class="copy-icon mt-3" onclick="copy('#btn_3')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_3" class="d-none">
+                        <a href="#" class="btn_3">Hover me</a>
+
+                        <!-- css -->
+                        .btn_3 {
+                        display: inline-block;
+                        padding: 0.75rem 1.25rem;
+                        border-radius: 10rem;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 1rem;
+                        letter-spacing: 0.15rem;
+                        transition: all 0.3s;
+                        position: relative;
+                        overflow: hidden;
+                        z-index: 1;
+                        }
+                        .btn_3:after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #0cf;
+                        border-radius: 10rem;
+                        z-index: -2;
+                        }
+                        .btn_3:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0%;
+                        height: 100%;
+                        background-color: #008fb3;
+                        transition: all 0.3s;
+                        border-radius: 10rem;
+                        z-index: -1;
+                        }
+                        .btn_3:hover {
+                        color: #fff;
+                        }
+                        .btn_3:hover:before {
+                        width: 100%;
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <a href="#" class="btn_4" data-back="Back" data-front="Front"></a>
+                      <div class="copy-icon mt-3" onclick="copy('#btn_4')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_4" class="d-none">
+                        <a href="#" class="btn_4" data-back="Back" data-front="Front"></a>
+
+                        <!-- css -->
+                        .btn_4 {
+                        opacity: 1;
+                        outline: 0;
+                        color: #fff;
+                        line-height: 40px;
+                        position: relative;
+                        text-align: center;
+                        letter-spacing: 1px;
+                        display: inline-block;
+                        text-decoration: none;
+                        font-family: 'Open Sans';
+                        text-transform: uppercase;
+
+                        &:hover {
+
+                        &:after {
+                        opacity: 1;
+                        transform: translateY(0) rotateX(0);
+                        }
+
+                        &:before {
+                        opacity: 0;
+                        transform: translateY(50%) rotateX(90deg);
+                        }
+                        }
+
+                        &:after {
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        width: 100%;
+                        color: #323237;
+                        display: block;
+                        transition: 0.5s;
+                        position: absolute;
+                        background: #adadaf;
+                        content: attr(data-back);
+                        transform: translateY(-50%) rotateX(90deg);
+                        }
+
+                        &:before {
+                        top: 0;
+                        left: 0;
+                        opacity: 1;
+                        color: #adadaf;
+                        display: block;
+                        padding: 0 30px;
+                        line-height: 40px;
+                        transition: 0.5s;
+                        position: relative;
+                        background: #323237;
+                        content: attr(data-front);
+                        transform: translateY(0) rotateX(0);
+                        }
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+
+                      <a href="#" class="btn_5"><span>Pausar</span></a>
+
+                      <div class="copy-icon mt-3" onclick="copy('#btn_5')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_5" class="d-none">
+                        <a href="#" class="btn_5"><span>Pausar</span></a>
+
+                        <!-- css -->
+                        .btn_5 {
+                        font-weight: 700;
+                        font-size: 2rem;
+                        text-decoration: none;
+                        text-align: center;
+                        display: block;
+                        width: 100%;
+                        padding: 1rem;
+                        border-radius: 1.5rem;
+                        background-color: #f6e58d;
+                        color: #000;
+                        transition: all .5s ease 0s;
+                        box-shadow: 0 10px #f9ca24;
+
+                        span {
+                        display: inline-block;
+                        position: relative;
+                        transition: all .5s ease;
+
+                        &::before {
+                        content: '\f04c';
+                        color: #000;
+                        font-size: 1rem;
+                        font-family: FontAwesome;
+                        display: inline-block;
+                        position: absolute;
+                        top: 10px;
+                        left: 1.5rem;
+                        opacity: 0;
+                        transition: all .1s ease 0s;
+                        }
+                        }
+
+                        &:hover span {
+                        padding-left: 1.5rem;
+
+                        &::before {
+                        left: 0;
+                        opacity: 1;
+                        }
+                        }
+
+                        &:active {
+                        box-shadow: 0 5px #f0932b;
+                        transform: translateY(5px);
+                        }
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+
+                      <button class="btn_6">
+                        <a href="#">Click me</a>
+                        <span class="shape">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </span>
+                      </button>
+
+                      <div class="copy-icon mt-3" onclick="copy('#btn_6')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_6" class="d-none">
+                        <button class="btn_6">
+                          <a href="#">Click me</a>
+                          <span class="shape">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </span>
+                        </button>
+
+                        <!-- css -->
+                        .btn_6 {
+                        width: 160px;
+                        height: 60px;
+                        background: #E6203B;
+                        cursor: pointer;
+                        border-radius: 25px;
+                        border: none;
+
+                        a {
+                        color: #fff;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        }
+
+                        span.shape {
+                        height: 60px;
+                        width: 160px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        }
+
+                        span span {
+                        content: "";
+                        position: absolute;
+                        margin: auto;
+                        height: 8px;
+                        width: 2px;
+                        background: #E6203B;
+                        opacity: 0;
+
+                        &:nth-of-type(1) {
+                        top: -20px;
+                        left: 0;
+                        right: 0;
+                        }
+
+                        &:nth-of-type(2) {
+                        bottom: -20px;
+                        left: 0;
+                        right: 0;
+                        }
+
+                        &:nth-of-type(3) {
+                        top: 0;
+                        bottom: 0;
+                        left: -10px;
+                        }
+
+                        &:nth-of-type(4) {
+                        top: 0;
+                        bottom: 0;
+                        right: -10px;
+                        }
+
+                        &:nth-of-type(5) {
+                        top: -20px;
+                        left: -70%;
+                        right: 0;
+                        transform: rotate(-30deg);
+                        }
+
+                        &:nth-of-type(6) {
+                        top: -20px;
+                        left: 0;
+                        right: -70%;
+                        transform: rotate(30deg);
+                        }
+
+                        &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 0;
+                        left: -70%;
+                        transform: rotate(30deg);
+                        }
+
+                        &:nth-of-type(8) {
+                        bottom: -20px;
+                        left: 0;
+                        right: -70%;
+                        transform: rotate(-30deg);
+                        }
+                        }
+
+
+                        @keyframes bounce {
+                        0% {
+                        transform: scale(1);
+                        }
+
+                        50% {
+                        transform: scale(1.1);
+                        }
+
+                        100% {
+                        transform: scale(1);
+                        }
+                        }
+
+                        &.active {
+                        animation: bounce 0.3s ease-out 1;
+
+                        span {
+
+                        span:nth-of-type(1) {
+                        animation: anim1 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(2) {
+                        animation: anim2 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(3) {
+                        animation: anim3 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(4) {
+                        animation: anim4 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(5) {
+                        animation: anim5 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(6) {
+                        animation: anim6 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(7) {
+                        animation: anim7 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(8) {
+                        animation: anim8 0.4s ease-out 1;
+                        }
+                        }
+
+                        }
+
+                        @keyframes anim1 {
+                        0% {
+                        transform: scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: translateY(-10px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: translateY(-20px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim2 {
+                        0% {
+                        transform: scaleY(1);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: translateY(10px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: translateY(20px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim3 {
+                        0% {
+                        transform: rotate(90deg) scaleX(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(90deg) translateY(10px) scaleX(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(90deg) translateY(20px) scaleX(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim4 {
+                        0% {
+                        transform: rotate(90deg) scaleX(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(90deg) translateY(-10px) scaleX(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(90deg) translateY(-20px) scaleX(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim5 {
+                        0% {
+                        transform: rotate(-30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(-30deg) translateY(-8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(-30deg) translateY(-16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim6 {
+                        0% {
+                        transform: rotate(30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(30deg) translateY(-8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(30deg) translateY(-16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim7 {
+                        0% {
+                        transform: rotate(30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(30deg) translateY(8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(30deg) translateY(16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim8 {
+                        0% {
+                        transform: rotate(-30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(-30deg) translateY(8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(-30deg) translateY(16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+                        }
+
+                        <!-- js -->
+                        $(".btn_6").click(function () {
+                        $(this).addClass("active").delay(300).queue(function (next) {
+                        $(this).removeClass("active");
+                        next();
+                        });
+                        });
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+
+
+
+                      <div class="copy-icon mt-3" onclick="copy('#btn_7')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="btn_7" class="d-none">
+                        <button class="btn_7">
+                          <a href="#">Click me</a>
+                          <span class="shape">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </span>
+                        </button>
+
+                        <!-- css -->
+                        .btn_6 {
+                        width: 160px;
+                        height: 60px;
+                        background: #E6203B;
+                        cursor: pointer;
+                        border-radius: 25px;
+                        border: none;
+
+                        a {
+                        color: #fff;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        }
+
+                        span.shape {
+                        height: 60px;
+                        width: 160px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        }
+
+                        span span {
+                        content: "";
+                        position: absolute;
+                        margin: auto;
+                        height: 8px;
+                        width: 2px;
+                        background: #E6203B;
+                        opacity: 0;
+
+                        &:nth-of-type(1) {
+                        top: -20px;
+                        left: 0;
+                        right: 0;
+                        }
+
+                        &:nth-of-type(2) {
+                        bottom: -20px;
+                        left: 0;
+                        right: 0;
+                        }
+
+                        &:nth-of-type(3) {
+                        top: 0;
+                        bottom: 0;
+                        left: -10px;
+                        }
+
+                        &:nth-of-type(4) {
+                        top: 0;
+                        bottom: 0;
+                        right: -10px;
+                        }
+
+                        &:nth-of-type(5) {
+                        top: -20px;
+                        left: -70%;
+                        right: 0;
+                        transform: rotate(-30deg);
+                        }
+
+                        &:nth-of-type(6) {
+                        top: -20px;
+                        left: 0;
+                        right: -70%;
+                        transform: rotate(30deg);
+                        }
+
+                        &:nth-of-type(7) {
+                        bottom: -20px;
+                        right: 0;
+                        left: -70%;
+                        transform: rotate(30deg);
+                        }
+
+                        &:nth-of-type(8) {
+                        bottom: -20px;
+                        left: 0;
+                        right: -70%;
+                        transform: rotate(-30deg);
+                        }
+                        }
+
+
+                        @keyframes bounce {
+                        0% {
+                        transform: scale(1);
+                        }
+
+                        50% {
+                        transform: scale(1.1);
+                        }
+
+                        100% {
+                        transform: scale(1);
+                        }
+                        }
+
+                        &.active {
+                        animation: bounce 0.3s ease-out 1;
+
+                        span {
+
+                        span:nth-of-type(1) {
+                        animation: anim1 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(2) {
+                        animation: anim2 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(3) {
+                        animation: anim3 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(4) {
+                        animation: anim4 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(5) {
+                        animation: anim5 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(6) {
+                        animation: anim6 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(7) {
+                        animation: anim7 0.4s ease-out 1;
+                        }
+
+                        span:nth-of-type(8) {
+                        animation: anim8 0.4s ease-out 1;
+                        }
+                        }
+
+                        }
+
+                        @keyframes anim1 {
+                        0% {
+                        transform: scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: translateY(-10px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: translateY(-20px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim2 {
+                        0% {
+                        transform: scaleY(1);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: translateY(10px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: translateY(20px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim3 {
+                        0% {
+                        transform: rotate(90deg) scaleX(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(90deg) translateY(10px) scaleX(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(90deg) translateY(20px) scaleX(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim4 {
+                        0% {
+                        transform: rotate(90deg) scaleX(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(90deg) translateY(-10px) scaleX(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(90deg) translateY(-20px) scaleX(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim5 {
+                        0% {
+                        transform: rotate(-30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(-30deg) translateY(-8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(-30deg) translateY(-16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim6 {
+                        0% {
+                        transform: rotate(30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(30deg) translateY(-8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(30deg) translateY(-16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim7 {
+                        0% {
+                        transform: rotate(30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(30deg) translateY(8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(30deg) translateY(16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+
+                        @keyframes anim8 {
+                        0% {
+                        transform: rotate(-30deg) scaleY(0.5);
+                        opacity: 0;
+                        }
+
+                        50% {
+                        transform: rotate(-30deg) translateY(8px) scaleY(1.4);
+                        opacity: 1;
+                        }
+
+                        100% {
+                        transform: rotate(-30deg) translateY(16px) scaleY(0.5);
+                        opacity: 0;
+                        }
+                        }
+                        }
+
+                        <!-- js -->
+                        $(".btn_6").click(function () {
+                        $(this).addClass("active").delay(300).queue(function (next) {
+                        $(this).removeClass("active");
+                        next();
+                        });
+                        });
+                      </xmp>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-icon" role="tabpanel" aria-labelledby="v-pills-icon-tab"
+                  tabindex="0">
+                  <div class="list d-flex align-items-center gap-4">
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon icon-fill d-flex align-items-center justify-content-center"><i
+                          class="fa fa-home"></i></div>
+                      <div class="copy-icon mt-3" onclick="copy('#icon1')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="icon1" class="d-none">
+                        <div class="icon icon-fill d-flex align-items-center justify-content-center">
+                          <i class="fa fa-home"></i>
+                        </div>
+
+                        <!-- css -->
+                        .icon {
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 12px;
+                        margin-right: 12px;
+                        border-radius: 30px;
+                        overflow: hidden;
+
+                        &::before,
+                        &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.25s ease;
+                        border-radius: 30px;
+                        }
+
+                        i {
+                        position: relative;
+                        color: #4b4b4d;
+                        font-size: 30px;
+                        transition: all 0.25s ease;
+                        }
+
+                        }
+
+                        .icon-fill {
+                        &::before {
+                        transition-duration: 0.5s;
+                        box-shadow: inset 0 0 0 1px #19FF05;
+                        }
+
+                        &:hover::before {
+                        box-shadow: inset 0 0 0 60px #19FF05;
+                        }
+                        }
+                      </xmp>
+                    </div>
+
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon icon-enter d-flex align-items-center justify-content-center"><i
+                          class="fa fa-user"></i></div>
+                      <div class="copy-icon mt-3" onclick="copy('#icon2')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="icon2" class="d-none">
+                        <div class="icon icon-enter d-flex align-items-center justify-content-center"><i
+                            class="fa fa-user"></i></div>
+
+                        <!-- css -->
+                        .icon {
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 12px;
+                        margin-right: 12px;
+                        border-radius: 30px;
+                        overflow: hidden;
+
+                        &::before,
+                        &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.25s ease;
+                        border-radius: 30px;
+                        }
+
+                        i {
+                        position: relative;
+                        color: #4b4b4d;
+                        font-size: 30px;
+                        transition: all 0.25s ease;
+                        }
+
+                        }
+
+                        .icon-enter {
+                        &::after {
+                        box-shadow: inset 0 0 0 1px #EB9532;
+                        }
+
+                        &::before {
+                        border-radius: 0;
+                        margin-left: -100%;
+                        box-shadow: inset 0 0 0 60px #EB9532;
+                        }
+
+                        &:hover::before {
+                        margin-left: 0;
+                        }
+
+                        &:hover i {
+                        color: #fff;
+                        }
+
+                        }
+                      </xmp>
+                    </div>
+
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon icon-expand d-flex flex-column justify-content-center align-items-center"> <i
+                          class="fa fa-bars"></i></div>
+                      <div class="copy-icon mt-3" onclick="copy('#icon3')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="icon3" class="d-none">
+                        <div class="icon icon-expand d-flex flex-column justify-content-center align-items-center"> <i
+                            class="fa fa-bars"></i>
+                        </div>
+
+                        <!-- css -->
+                        .icon {
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 12px;
+                        margin-right: 12px;
+                        border-radius: 30px;
+                        overflow: hidden;
+
+                        &::before,
+                        &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.25s ease;
+                        border-radius: 30px;
+                        }
+
+                        i {
+                        position: relative;
+                        color: #4b4b4d;
+                        font-size: 30px;
+                        transition: all 0.25s ease;
+                        }
+
+                        }
+
+                        .icon-expand {
+
+                        &:hover i {
+                        color: #fff;
+                        }
+
+                        &::after {
+                        box-shadow: inset 0 0 0 1px #C82647;
+                        }
+
+                        &::before {
+                        background: #C82647;
+                        box-shadow: inset 0 0 0 60px #ffffff;
+                        }
+
+                        &:hover::before {
+                        box-shadow: inset 0 0 0 1px #ffffff;
+                        }
+                        }
+                      </xmp>
+                    </div>
+
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon icon-collapse d-flex flex-column justify-content-center align-items-center"><i
+                          class="fa fa-sign-in"></i></div>
+                      <div class="copy-icon mt-3" onclick="copy('#icon4')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="icon4" class="d-none">
+                        <div class="icon icon-collapse d-flex flex-column justify-content-center align-items-center"><i
+                            class="fa fa-sign-in"></i></div>
+                        <!-- css -->
+                        .icon {
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 12px;
+                        margin-right: 12px;
+                        border-radius: 30px;
+                        overflow: hidden;
+
+                        &::before,
+                        &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.25s ease;
+                        border-radius: 30px;
+                        }
+
+                        i {
+                        position: relative;
+                        color: #4b4b4d;
+                        font-size: 30px;
+                        transition: all 0.25s ease;
+                        }
+
+                        }
+
+                        .icon-collapse {
+                        &::before {
+                        border-radius: 0;
+                        }
+
+                        &:hover::before {
+                        box-shadow:
+                        inset 0 30px 0 0 #8CC63F,
+                        inset 0 -30px 0 0 #8CC63F;
+                        }
+
+                        &::after {
+                        box-shadow: inset 0 0 0 1px #8CC63F;
+                        }
+
+                        &:hover i {
+                        color: #fff;
+                        }
+                        }
+                      </xmp>
+                    </div>
+
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="icon icon-rotate d-flex flex-column justify-content-center align-items-center"><i
+                          class="fa fa-phone"></i></div>
+                      <div class="copy-icon mt-3" onclick="copy('#icon5')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="icon5" class="d-none">
+                        <div class="icon icon-rotate d-flex flex-column justify-content-center align-items-center"><i
+                            class="fa fa-phone"></i>
+                        </div>
+                        <!-- css -->
+                        .icon {
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        margin-left: 12px;
+                        margin-right: 12px;
+                        border-radius: 30px;
+                        overflow: hidden;
+
+                        &::before,
+                        &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.25s ease;
+                        border-radius: 30px;
+                        }
+
+                        i {
+                        position: relative;
+                        color: #4b4b4d;
+                        font-size: 30px;
+                        transition: all 0.25s ease;
+                        }
+
+                        }
+
+                        .icon-rotate {
+                        box-shadow: inset 0 0 0 1px #7E3661;
+
+                        &::after,
+                        &::before {
+                        border: 0px solid transparent;
+                        }
+
+                        &:hover::before {
+                        transition:
+                        border-top-width 0.3s ease,
+                        border-top-color 0.3s ease;
+                        border-width: 60px;
+                        border-top-color: #7E3661;
+                        }
+
+                        &:hover::after {
+                        transition:
+                        border-left-width 0.3s ease,
+                        border-left-color 0.3s ease;
+                        border-width: 60px;
+                        border-left-color: #7E3661;
+                        }
+
+                        &:hover {
+                        transition: background 0.001s ease 0.3s;
+                        background: #7E3661;
+
+                        i {
+                        color: #fff;
+                        }
+                        }
+
+                        i {
+                        z-index: 1;
+                        }
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+
+                      <a href="#" class='icon_6'>
+                        <i class="fa fa-face-smile fa-fw" aria-hidden="true"></i>
+                      </a>
+                      <div class="copy-icon mt-3" onclick="copy('#icon_6')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="icon_6" class="d-none">
+                        <a href="#" class='icon_6'>
+                          <i class="fa fa-face-smile fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <!-- css -->
+                        .icon_6 {
+                        font-family: 'Roboto', sans-serif;
+                        color: #ccc;
+                        font-size: 2rem;
+                        border-radius: 50%;
+                        transition: all 0.2s ease;
+
+                        &:hover {
+                        animation: circle-anim 0.3s ease forwards;
+                        transition: all 0.4s ease;
+                        background: #FF4500;
+
+                        i {
+                        color: #fff;
+                        }
+                        }
+
+                        @keyframes circle-anim {
+                        0% {}
+
+                        90% {
+                        padding: 0.20em 0.25em;
+                        margin: -0.25em;
+                        }
+
+                        100% {
+                        padding: 0.20em 0.25em;
+                        margin: -0.25em;
+                        }
+                        }
+                        }
+                      </xmp>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="tab-pane fade" id="v-pills-upload" role="tabpanel" aria-labelledby="v-pills-upload-tab"
+                  tabindex="0">
+                  <div class="list d-flex align-items-center gap-5">
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="up_img1 mb-3">
+                        <img src="./images/towhid.jpeg" alt="not found">
+                        <div class="up_box1">
+                          <input type="file" id="upload" class="d-none" accept="image/*">
+                          <label for="upload">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="copy-icon" onclick="copy('#up_img1')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+                      <xmp id="up_img1" class="d-none">
+                        <div class="up_img1">
+                          <img src="./images/towhid.jpeg" alt="not found">
+                          <div class="up_box1">
+                            <input type="file" id="upload" class="d-none" accept="image/*">
+                            <label for="upload">
+                              <i class="fas fa-cloud-upload-alt"></i>
+                            </label>
+                          </div>
+                        </div>
+
+                        <!-- css -->
+                        .up_img1{
+                        position: relative;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        border: 2px solid #29ff29;
+                        }
+                        .up_img1 img{
+                        padding: 5px;
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        }
+                        .up_img1 .up_box1 {
+                        position: absolute;
+                        bottom: -6px;
+                        right: -6px;
+                        }
+                        .up_img1 .up_box1 i {
+                        width: 35px;
+                        height: 35px;
+                        background-color: #29ff29;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 35px;
+                        color: #FFFFFF;
+                        cursor: pointer;
+                        font-size: 14px;
+                        }
+                      </xmp>
+                    </div>
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <div class="up_img2 text-center rounded-3 mb-3">
+                        <input type="file" name="dp">
+                        <img src="./images/upload-icon.svg" alt="dp" class="img-fluid">
+                        <p class="text-dark cmn-label mb-2 mt-3">
+                          Drop your files here or
+                          <a href="#" class="text-primary">browse</a>
+                        </p>
+                        <p class="mb-0 file-name">
+                          (Only *.jpeg and *.png images will be accepted)
+                        </p>
+                      </div>
+
+                      <div class="copy-icon" onclick="copy('#up_img2')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+                      <xmp id="up_img2" class="d-none">
+                        <div class="up_img2 text-center rounded-3 mb-3">
+                          <input type="file" name="dp">
+                          <img src="./images/upload-icon.svg" alt="dp" class="img-fluid">
+                          <p class="text-dark cmn-label mb-2 mt-3">
+                            Drop your files here or
+                            <a href="#" class="text-primary">browse</a>
+                          </p>
+                          <p class="mb-0 file-name">
+                            (Only *.jpeg and *.png images will be accepted)
+                          </p>
+                        </div>
+
+                        <!-- css -->
+                        .up_img2 {
+                        border: 2px dashed rgba(173, 170, 170, 0.5);
+                        padding: 25px 10px;
+                        position: relative;
+                        overflow: hidden;
+                        }
+
+                        .up_img2 input {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+                        cursor: pointer;
+                        }
+                      </xmp>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-tracking" role="tabpanel" aria-labelledby="v-pills-tracking-tab"
+                  tabindex="0">
+                  <div class="list d-flex align-items-center gap-5">
+                    <div class="item d-flex flex-column justify-content-center align-items-center">
+                      <ol id="tracking_1">
+                        <li class="fs-xs tt-step tt-step-done">Pending</li>
+                        <li class="fs-xs tt-step tt-step-done">Processing</li>
+                        <li class="fs-xs tt-step active">On the Way</li>
+                        <li class="fs-xs tt-step">Delivered</li>
+                      </ol>
+
+                      <div class="copy-icon mt-3" onclick="copy('#id3')">
+                        <span id="copy-quote">
+                          <img src="./images/copy.png" alt="" />
+                        </span>
+                      </div>
+
+                      <xmp id="id3" class="d-none">
+                        <ol id="tracking_1">
+                          <li class="fs-xs tt-step tt-step-done">Pending</li>
+                          <li class="fs-xs tt-step tt-step-done">Processing</li>
+                          <li class="fs-xs tt-step active">On the Way</li>
+                          <li class="fs-xs tt-step">Delivered</li>
+                        </ol>
+
+                        <!-- css -->
+                        #progress-bar {
+                        display: table;
+                        width: 100%;
+                        margin: 0;
+                        position: relative;
+                        z-index: 2;
+                        table-layout: fixed;
+                        padding: 0;
+                        counter-reset: step;
+                        }
+
+                        #progress-bar li.tt-step.tt-step-done {
+                        color: #22c55e;
+                        }
+
+                        #progress-bar li.tt-step {
+                        list-style-type: none;
+                        display: table-cell;
+                        width: 25%;
+                        float: left;
+                        position: relative;
+                        text-align: center;
+                        }
+
+                        #progress-bar li.tt-step.tt-step-done:before {
+                        border-color: #22c55e;
+                        background-color: #22c55e;
+                        color: #fff;
+                        content: "\f00c";
+                        font-family: "FontAwesome";
+                        }
+
+                        #progress-bar li.tt-step:before {
+                        width: 30px;
+                        height: 30px;
+                        color: #5d6374;
+                        content: counter(step);
+                        counter-increment: step;
+                        line-height: 30px;
+                        font-size: 14px;
+                        border: 1px solid #f4f4f4;
+                        display: block;
+                        text-align: center;
+                        margin: 0 auto 10px auto;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        }
+
+                        #progress-bar li.tt-step.tt-step-done+li:after {
+                        background-color: #22c55e;
+                        }
+
+                        #progress-bar li.tt-step:not(:first-child)::after {
+                        width: 100%;
+                        height: 4px;
+                        content: "";
+                        position: absolute;
+                        background-color: #f4f4f4;
+                        top: 13px;
+                        left: -50%;
+                        z-index: -1;
+                        }
+
+                        #progress-bar li.tt-step.active:before {
+                        border-color: #22c55e;
+                        color: #22c55e;
+                        font-weight: 700;
+                        }
+                      </xmp>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- scroll top part start -->
+      <button class="scroll-to-top">
+        <i class="fas fa-angle-up"></i>
+      </button>
+      <!-- scroll top part end -->
+    </div>
+  </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

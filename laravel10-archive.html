@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 px-0">
+          <div class="archive d-flex">
+            <div class="sidebar">
+              <div class="title bg-secondary">
+                <a href="index.html"
+                  class="p-4 d-flex flex-column justify-content-center align-items-center text-center gap-2">
+                  <img src="./images/file.png" alt="">
+                  <span class="text-white">Nogor Archive</span></a>
+              </div>
+
+              <div class="d-flex align-items-start vh-100 position-sticky top-0 overflow-auto">
+                <div id="list-example" class="list-group side_list w-100">
+                  <a class="list-group-item list-group-item-action side_item" href="#list-item-1">Database</a>
+                  <a class="list-group-item list-group-item-action side_item" href="#list-item-2">Relationship
+                    Vue</a>
+                  <a class="list-group-item list-group-item-action side_item" href="#list-item-3">Upoading</a>
+                </div>
+              </div>
+
+            </div>
+            <div class="main-body px-3">
+              <div class="d-flex align-items-start justify-content-center border-bottom border-dark py-3 bg-white ">
+                <div class="nav nav-pills">
+                  <a href="#" class="nav-link active">Laravel 10</a>
+                  <a href="#" class="nav-link">Laravel 11</a>
+                  <a href="#" class="nav-link">Laravel 12</a>
+                </div>
+              </div>
+              <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true"
+                class="scrollspy-example" tabindex="0">
+
+                <div id="list-item-1">
+                  <h4>Database</h4>
+                  <p><b>Order</b><br>Order by a specific columns</p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara1">
+                      $query->orderByRaw("FIELD(status, 'Pending', 'Success')")
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara1')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+
+                  <p><b>Date</b><br>From date / To date Contain a single date:</p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara2">
+                      // controller:
+                      $startDate = $request->from_date ?? '1900-01-01';
+                      $endDate = $request->to_date ?? now()->toDateString();
+                      $query->whereBetween('notice_date', [$startDate, $endDate]);
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara2')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara3">
+                      <div class="col-2">
+                        <div class="form-element">
+                          <input placeholder="From date" v-model="search_data.from_date"
+                            class="form-control form-control-sm shadow-none" type="text" onfocus="(this.type='date')"
+                            id="date" />
+                        </div>
+                      </div>
+                      <div class="col-2">
+                        <div class="form-element">
+                          <input placeholder="To Date" v-model="search_data.to_date"
+                            class="form-control form-control-sm shadow-none" type="text" onfocus="(this.type='date')"
+                            id="date" />
+                        </div>
+                      </div>
+
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara3')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+
+                  <p>From date / To date which contain two date:</p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara4">
+                      // controller:
+                      $startDate = $request->from_date ?? '1900-01-01';
+                      $endDate = $request->to_date ?? now()->toDateString();
+                      $query->whereDate('start_date', '>=', $startDate)
+                      ->whereDate('end_date', '<=', $endDate); </xmp>
+                        <div class="copy-icon" onclick="copy('#lara4')">
+                          <span id="copy-quote">
+                            <img src="./images/copy.png" alt="" />
+                          </span>
+                        </div>
+                  </div>
+                </div>
+                <!--  -->
+
+
+                <div id="list-item-2">
+                  <h4>Relationship</h4>
+                  <p><b>Belongs to:</b></p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara5">
+                      return $this->belongsTo(Foo::class, 'foreign_key', 'owner_key');
+                      return $this->belongsTo(Album::class, "album_id","id");
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara5')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+
+                  <p><b>Has One:</b></p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara6">
+                      // controller:
+                      $startDate = $request->from_date ?? '1900-01-01';
+                      $endDate = $request->to_date ?? now()->toDateString();
+                      $query->whereBetween('notice_date', [$startDate, $endDate]);
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara6')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+
+                  <p><b>Has Many:</b></p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara7">
+                      return $this->hasMany(Foo::class, 'foreign_key', 'local_key');
+                      return $this->hasMany(Foo::class, 'slider_id', 'id');
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara7')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+
+                  <p><b>Search on Relationship:</b></p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara8">
+                      $query = Video::with('model')->whereHas('album', function ($query) use ($request) {
+                      $query->whereLike('name',$request->value );
+                      })->oldest('sorting');
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara8')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+
+
+                <div id="list-item-3">
+                  <h4>Upoading</h4>
+                  <p><b>Image Upload:</b></p>
+                  <div class="d-flex gap-3 mt-3">
+                    <xmp id="lara9">
+                      if (!empty($thumbnail)) {
+                      $data['thumbnail'] = $this->upload($thumbnail, 'video', null, $base64 = false);
+                      }
+
+                      if (!empty($thumbnail)) {
+                      $data['thumbnail'] = $this->upload($thumbnail, 'video', null, $base64 = true);
+                      } else {
+                      $data['thumbnail'] = $this->oldFile($video->thumbnail);
+                      }
+
+                    </xmp>
+                    <div class="copy-icon" onclick="copy('#lara9')">
+                      <span id="copy-quote">
+                        <img src="./images/copy.png" alt="" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- scroll top part start -->
+        <button class="scroll-to-top">
+          <i class="fas fa-angle-up"></i>
+        </button>
+        <!-- scroll top part end -->
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

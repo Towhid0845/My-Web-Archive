@@ -1,0 +1,36 @@
+main {
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.home .archive_box {
+  background-color: #ddd;
+  padding: 10px 50px;
+  border-radius: 50px;
+}
+.home header {
+  padding: 0 40px;
+}
+.home header h1 {
+  color: #DA5327;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.home header .logo {
+  height: 100px;
+}
+.home header .icon {
+  height: 50px;
+}
+.home .category {
+  margin-top: 100px;
+}
+.home .category .item {
+  padding: 40px 50px;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  color: #d85327;
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+/*# sourceMappingURL=home.css.map */

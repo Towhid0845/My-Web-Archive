@@ -1,0 +1,63 @@
+#tracking_1 {
+  display: table;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  table-layout: fixed;
+  padding: 0;
+  counter-reset: step;
+}
+#tracking_1 li.tt-step {
+  list-style-type: none;
+  display: table-cell;
+  width: 25%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+#tracking_1 li.tt-step::before {
+  width: 30px;
+  height: 30px;
+  color: #5d6374;
+  content: counter(step);
+  counter-increment: step;
+  line-height: 30px;
+  font-size: 14px;
+  border: 1px solid #f4f4f4;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#tracking_1 li.tt-step.tt-step-done {
+  color: #22c55e;
+}
+#tracking_1 li.tt-step.tt-step-done + li:after {
+  background-color: #22c55e;
+}
+#tracking_1 li.tt-step.tt-step-done::before {
+  border-color: #22c55e;
+  background-color: #22c55e;
+  color: #fff;
+  content: "\f00c";
+  font-family: "FontAwesome";
+}
+#tracking_1 li.tt-step:not(:first-child)::after {
+  width: 100%;
+  height: 4px;
+  content: "";
+  position: absolute;
+  background-color: #f4f4f4;
+  top: 13px;
+  left: -50%;
+  z-index: -1;
+}
+#tracking_1 li.tt-step.active:before {
+  border-color: #22c55e;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=tracking.css.map */
